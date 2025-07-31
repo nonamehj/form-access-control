@@ -1,0 +1,107 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f1f3f5;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0.25rem;
+  position: relative;
+}
+.nav-logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.nav-logo a {
+  color: #000;
+  cursor: pointer;
+}
+.nav-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-user {
+  margin: 0 0.25rem;
+  padding: 0.25rem;
+  font-weight: bold;
+}
+
+.nav-btn button,
+.nav-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem;
+  margin: 0 0.25rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.nav-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem;
+  margin: 0 0.25rem;
+  background-color: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .nav-logo {
+    font-size: 1.75rem;
+  }
+  .current-user {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  nav {
+    padding: 0.5rem 0.25rem;
+  }
+  .nav-container {
+    width: 95%;
+    padding: 1rem 0.25rem;
+  }
+  .nav-logo {
+    font-size: 2rem;
+  }
+  .current-user {
+    font-size: 1rem;
+  }
+  .nav-btn button,
+  .nav-login-btn {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 1rem 0.5rem;
+  }
+  .nav-container {
+    width: 85%;
+    padding: 1rem 0.5rem;
+  }
+  .nav-logo {
+    font-size: 2.5rem;
+  }
+  .current-user {
+    font-size: 1.1rem;
+  }
+  .nav-btn button,
+  .nav-login-btn {
+    font-size: 1.5rem;
+  }
+}

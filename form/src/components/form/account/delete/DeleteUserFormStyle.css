@@ -1,0 +1,33 @@
+.delete-row {
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.delete-row:first-child {
+  margin-top: 0.25rem;
+}
+.delete-row:last-child {
+  margin-bottom: 0.25rem;
+}
+
+.delete-row label {
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .delete-section {
+    max-width: 350px;
+    max-height: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .delete-section {
+    max-width: 400px;
+    max-height: 500px;
+  }
+}

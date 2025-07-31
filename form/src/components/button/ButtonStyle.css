@@ -1,0 +1,44 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.btn-page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  max-width: 1170px;
+}
+.btn-page-center p {
+  font-weight: bold;
+}
+.btn-page-center button {
+  margin: 0 1rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-color: transparent;
+  background-color: rgb(73, 166, 233);
+  border-radius: 0.25rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .btn-page-center {
+    width: 95vw;
+  }
+  .btn-page-center p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn-page-center {
+    width: 90vw;
+  }
+  .btn-page-center p {
+    font-size: 1.2rem;
+  }
+}
