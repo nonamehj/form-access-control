@@ -31,8 +31,6 @@ const ApiProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [inputValue, setInputValue] = useState("react");
   const timeoutRef = useRef(null);
-  console.log("api context state", state.hits);
-
   const fetchStories = useCallback(async (url) => {
     dispatch({ type: SET_LOADING });
     try {
@@ -51,8 +49,6 @@ const ApiProvider = ({ children }) => {
     (type) => {
       const searchQuery = type === "login" ? inputValue : "react";
       const pageValue = type === "login" ? state.page : 0;
-      // setInputValue("react");
-      // fetchStories(`${API_ENDPOINT}query=react&page=0`);
       setInputValue(searchQuery);
       fetchStories(`${API_ENDPOINT}query=${searchQuery}&page=${pageValue}`);
     },

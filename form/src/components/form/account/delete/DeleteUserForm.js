@@ -11,7 +11,7 @@ const DeleteUserForm = () => {
     const formData = new FormData(e.currentTarget);
     const userData = formatFormData(formData);
     const error = validateDeleteForm(userData, currentUser);
-
+    console.log("delete", userData);
     if (error) {
       alert(error);
       return;

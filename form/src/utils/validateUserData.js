@@ -2,7 +2,7 @@ import { idRegex, pwRegex, emailRegex, nicknameRegex } from "./regex";
 
 const validateUserData = (userData, users = []) => {
   if (!userData.id || !idRegex.test(userData.id)) {
-    return "아이디는 4~16자여야 합니다";
+    return "아이디는 소문자 4~16자여야 합니다";
   }
   const isDuplicateId = users.some((user) => user.id === userData.id);
   // if (isDuplicateId) {

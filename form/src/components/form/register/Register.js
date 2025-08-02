@@ -107,7 +107,7 @@ const Register = () => {
       <div className="register-container form-container">
         <h3 className="register-title form-title">회원가입</h3>
         <form className="register-form form" onSubmit={onSubmit}>
-          <div className="form-row-wrapper">
+          <div className="form-row-wrapper register-row-wrapper">
             <div className="form-row register-row">
               <div className="form-center form-center-id">
                 <div className="form-label form-id">
@@ -120,6 +120,9 @@ const Register = () => {
                   name="id"
                   placeholder="아이디는 4~16자 입력해주세요"
                   className="input-id"
+                  onChange={(e) => e.target.value.toLowerCase()}
+                  autoCapitalize="off"
+                  autoCorrect="off"
                 />
               </div>
 
@@ -148,6 +151,9 @@ const Register = () => {
                   className="form-input input-email"
                   // placeholder="이메일주소 (비밀번호 찾기 등 본인 확인용)"
                   placeholder="비밀번호 찾기 등 본인 확인용"
+                  onChange={(e) => e.target.value.toLowerCase()}
+                  autoCapitalize="off"
+                  autoCorrect="off"
                 />
               </div>
             </div>

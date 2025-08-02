@@ -2,10 +2,11 @@
   margin: 1rem 0;
 }
 
-.login-row-wrapper {
+.register-row-wrapper {
   justify-content: center;
   align-items: center;
 }
+
 .form-select {
   display: flex;
   justify-content: center;

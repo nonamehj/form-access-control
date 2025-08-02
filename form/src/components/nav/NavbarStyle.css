@@ -25,6 +25,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.25rem;
+  /* border: 1px solid red; */
 }
 .current-user {
   margin: 0 0.25rem;
@@ -42,10 +44,12 @@ nav {
   background-color: transparent;
   border-color: transparent;
   color: #000;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
-
+.nav-profile-btn {
+  margin-right: 0.5rem;
+}
 .nav-login-btn {
   display: flex;
   justify-content: center;
@@ -79,11 +83,12 @@ nav {
     font-size: 2rem;
   }
   .current-user {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .nav-btn button,
+  .nav-btn a,
   .nav-login-btn {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -98,10 +103,11 @@ nav {
     font-size: 2.5rem;
   }
   .current-user {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .nav-btn button,
+  .nav-btn a,
   .nav-login-btn {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }

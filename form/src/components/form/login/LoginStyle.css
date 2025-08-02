@@ -5,6 +5,10 @@
 .login-container {
   /* border: 2px solid red; */
 }
+.login-row-wrapper {
+  justify-content: center;
+  align-items: center;
+}
 .login-row {
   border: none;
   flex-direction: column;
