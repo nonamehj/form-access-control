@@ -45,9 +45,9 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    // const isDuplicateId = users.some((user) => user.id === newUser.id);
     const userData = formatFormData(formData);
     // const userData = Object.fromEntries(formData);
+    console.log("regi", userData);
     const error = validateUserData(userData, users);
     if (error) {
       alert(error);

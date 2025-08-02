@@ -86,9 +86,11 @@ nav {
     font-size: 1.2rem;
   }
   .nav-btn button,
-  .nav-btn a,
-  .nav-login-btn {
+  .nav-btn a {
     font-size: 1.5rem;
+  }
+  .nav-login-btn {
+    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -106,8 +108,10 @@ nav {
     font-size: 1.3rem;
   }
   .nav-btn button,
-  .nav-btn a,
-  .nav-login-btn {
+  .nav-btn a {
     font-size: 1.75rem;
+  }
+  .nav-login-btn {
+    font-size: 1.5rem;
   }
 }

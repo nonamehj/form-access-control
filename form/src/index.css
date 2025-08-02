@@ -34,8 +34,8 @@ main {
   height: calc(var(--vh) * 100);
   /* background-color: #f4f7fb; */
   background-color: #f1f3f5;
-  /* overflow: overlay; */
-  overflow-y: auto;
+  overflow: overlay;
+  /* overflow-y: auto; */
 }
 /*폼 공통*/
 .section {

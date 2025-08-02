@@ -7,6 +7,7 @@ const formatFormData = (formData) => {
     phone: obj.phone?.trim() || "",
     nickname: obj.nickname?.trim() || "",
     gender: obj.gender || "",
+    nationality: obj.nationality || "",
     birth: obj.birth || "",
     telecom: obj.telecom || "",
   };

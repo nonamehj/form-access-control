@@ -1,7 +1,11 @@
 import "./DeleteUserFormStyle.css";
 import { useFormContext } from "./../../../../formContext";
 import { useNavigate } from "react-router-dom";
-import { formatFormData, validateDeleteForm } from "../../../../utils";
+import {
+  deleteFormatFormData,
+  formatFormData,
+  validateDeleteForm,
+} from "../../../../utils";
 const DeleteUserForm = () => {
   const { handleSubmit, currentUser } = useFormContext();
   const navigate = useNavigate();
@@ -9,9 +13,9 @@ const DeleteUserForm = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const userData = formatFormData(formData);
+    const userData = deleteFormatFormData(formData);
+    console.log("ddasdf", userData);
     const error = validateDeleteForm(userData, currentUser);
-    console.log("delete", userData);
     if (error) {
       alert(error);
       return;

@@ -5,10 +5,7 @@ const validateUserData = (userData, users = []) => {
     return "아이디는 소문자 4~16자여야 합니다";
   }
   const isDuplicateId = users.some((user) => user.id === userData.id);
-  // if (isDuplicateId) {
-  //   return "이미 사용중인 아이디입니다";
-  // }
-  // if (users.length > 0 && isDuplicateId) {
+
   if (isDuplicateId) {
     return "이미 사용중인 아이디입니다";
   }

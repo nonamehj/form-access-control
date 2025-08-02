@@ -1,10 +1,6 @@
 import { idRegex, pwRegex } from "./regex";
 
 const validateDeleteForm = (userData, currentUser) => {
-  console.log("valid user", userData);
-  console.log("valid current", currentUser);
-  console.log("valid type", userData.password === currentUser.password);
-
   /*아이디 빈값 확인 */
   if (!userData.id) {
     return "아이디를 입력해주세요";
@@ -14,7 +10,13 @@ const validateDeleteForm = (userData, currentUser) => {
     return "아이디는 영문으로 입력해주세요";
   }
   /*비밀번호 빈값 확인 */
-  if (!userData.password || !userData.password2) {
+  // if (!userData.password || !userData.password2) {
+  //   return "비밀번호를 입력해주세요";
+  // }
+  if (!userData.password) {
+    return "비밀번호를 입력해주세요";
+  }
+  if (!userData.password2) {
     return "비밀번호를 입력해주세요";
   }
   /*비밀번호1 형식검사 */

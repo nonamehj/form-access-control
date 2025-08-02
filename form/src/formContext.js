@@ -141,7 +141,7 @@ const FormProvider = ({ children }) => {
   const submitDeleteForm = (formData) => {
     const userData = Object.fromEntries(formData);
     const deleteUsers = users.filter((user) => user.id !== userData.id);
-    setCurrentUser(null);
+    setCurrentUser({});
     setUsers(deleteUsers);
     return true;
   };

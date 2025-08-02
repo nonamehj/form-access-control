@@ -1,6 +1,5 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
-import Navbar from "../components/nav/Navbar";
+import { Navigate } from "react-router-dom";
 import { useFormContext } from "./../formContext";
 
 const ProtectedLayout = ({ children }) => {
