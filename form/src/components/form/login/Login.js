@@ -29,14 +29,13 @@ const Login = () => {
             </div>
           </div>
           <button className="login-btn form-btn">로그인</button>
-
-          <div className="login-register-wrapper">
-            <p className="login-readme">계정이 없으신가요? </p>
-            <Link to="/login/agree" className="login-register">
-              회원가입
-            </Link>
-          </div>
         </form>
+        <div className="login-register-wrapper">
+          <p className="login-readme">계정이 없으신가요? </p>
+          <Link to="/login/agree" className="login-register">
+            회원가입
+          </Link>
+        </div>
       </div>
     </section>
   );

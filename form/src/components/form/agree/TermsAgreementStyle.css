@@ -1,5 +1,12 @@
 .agree-section {
   margin: 1rem 0;
+  /*아래 확인후 지우기*/
+  margin: 1rem 0 0 0;
+  border: 1px solid red;
+}
+
+.agree-container {
+  border: 1px solid blue;
 }
 
 .agree-row-wrapper {
@@ -45,6 +52,10 @@
   cursor: pointer;
 }
 @media screen and (max-width: 479px) {
+  /*agree-section 너비 확인후  지우기*/
+  .agree-section {
+    max-width: 350px;
+  }
   .agree-title {
     padding: 1rem 0.25rem;
 
