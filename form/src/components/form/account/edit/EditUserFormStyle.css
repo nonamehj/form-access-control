@@ -1,5 +1,49 @@
+/*회원가입하고 공통 */
+.form-section {
+  justify-content: center;
+  align-items: center;
+  /* margin: 1rem 0; */
+  background-color: #f1f3f5;
+}
+.edit-container {
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid rgba(46, 43, 43, 0.5);
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+.edit-row-wrapper {
+  align-items: center;
+}
 .edit-btns-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*회원가입하고 동일한 */
+@media screen and (max-width: 319px) {
+  .form-center-identity {
+    flex-direction: column;
+  }
+  .group {
+    margin: 0;
+  }
+  .group-gender {
+    margin-bottom: 0.125rem;
+  }
+  .group-nationality {
+    margin-top: 0.125rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .edit-container {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .edit-container {
+    max-width: 600px;
+  }
 }

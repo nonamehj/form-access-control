@@ -52,6 +52,9 @@ function App() {
           <Route index element={<LoginPage />} />
           <Route path="agree" element={<AgreementPage />} />
           <Route path="signup" element={<RegisterPage />} />
+          <Route path="find-id" element={<div>find id</div>} />
+          <Route path="find-password" element={<div>find password</div>} />
+          <Route path="reset-password" element={<div>reset password</div>} />
         </Route>
         <Route
           path="/user"

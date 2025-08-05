@@ -83,7 +83,7 @@ const EditUserForm = () => {
       <div className="edit-container form-container">
         <h3 className="edit-title form-title">내 정보 수정</h3>
         <form className="edit-form form" onSubmit={onSubmit}>
-          <div className="form-row-wrapper">
+          <div className="form-row-wrapper edit-row-wrapper">
             <div className="form-row edit-row">
               <div className="form-center form-center-id">
                 <div className="form-label form-id">

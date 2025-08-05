@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #f1f3f5;
+  /* border: 1px solid red; */
 }
 .user-info-container {
   flex: 1;
@@ -10,6 +11,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 1rem 0;
+  background-color: #fff;
+  border: 1px solid rgba(46, 43, 43, 0.5);
+  border-radius: 0.25rem;
 }
 .user-info-profile {
   display: flex;
@@ -56,7 +61,18 @@
 }
 @media screen and (max-width: 767px) {
   .user-info-section {
+    /* max-width: 400px; */
+    /* min-height: 450px; */
+    /* max-height: 450px; */
+  }
+  .user-info-container {
+    /* max-width: 400px; */
+    /* min-height: 450px; */
+    /* max-height: 450px; */
+    /* max-width: 400px; */
     max-width: 400px;
+    /* min-height: 500px; */
+    /* max-height: 500px; */
     min-height: 450px;
     max-height: 450px;
   }
@@ -73,9 +89,19 @@
 
 @media screen and (min-width: 768px) {
   .user-info-section {
-    max-width: 400px;
-    min-height: 450px;
-    max-height: 450px;
+    /* max-width: 400px; */
+    /* min-height: 450px; */
+    /* max-height: 450px; */
+  }
+  .user-info-container {
+    /* max-width: 400px; */
+    /* min-height: 450px; */
+    /* max-height: 450px; */
+    max-width: 450px;
+    /* min-height: 550px; */
+    /* max-height: 550px; */
+    min-height: 500px;
+    max-height: 500px;
   }
   .user-icon {
     font-size: 1.75rem;

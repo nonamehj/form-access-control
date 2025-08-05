@@ -42,17 +42,20 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0.25rem;
+  margin: 1rem 0;
   width: 100%;
   /* margin: auto; */
   /* border: 1px solid rgba(46, 43, 43, 0.5); */
   /* border-radius: 0.25rem; */
   background-color: #fff;
+  /* padding: 0.25rem 0.5rem; */
 }
 .form-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 0.25rem;
+
   /* border: 2px solid red; */
 }
 .form-title {
@@ -69,6 +72,7 @@ main {
   /**/
   padding: 0 0.25rem;
 }
+
 .form-row-wrapper {
   flex: 1;
   display: flex;
@@ -77,13 +81,14 @@ main {
   padding: 0.25rem;
   /* border: 2px solid red; */
 }
+
 .form-row {
   display: flex;
   flex-direction: column;
   margin: 0.5rem 0;
   padding: 0.5rem;
   width: 100%;
-  border: 0.5px solid rgba(46, 43, 43, 0.7);
+  border: 1px solid rgba(46, 43, 43, 0.5);
   border-radius: 0.5rem;
   /* border: 1px solid purple; */
 }
@@ -111,15 +116,14 @@ input {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
   outline: none;
-  border: 0.5px solid rgba(46, 43, 43, 0.5);
+  border: 1px solid rgba(46, 43, 43, 0.5);
   border-radius: 0.25rem;
-
-  /* border: 1px solid purple; */
-  /* border: 1px solid red; */
 }
-
+input:focus {
+  border: 1px solid rgba(46, 43, 43, 1);
+}
 .form-btn {
   display: flex;
   justify-content: center;
@@ -135,8 +139,14 @@ input {
   /* border: 1px solid red; */
 }
 @media screen and (max-width: 767px) {
+  .section {
+    padding: 0.25rem;
+  }
   .form-title {
     font-size: 1.6rem;
+  }
+  .form {
+    padding: 0 0.25rem;
   }
   .form-center {
     flex-direction: column;
@@ -144,14 +154,21 @@ input {
   .form-label {
     margin-bottom: 0.25rem;
   }
+
   .form-btn {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .section {
+    padding: 0.25rem 0.5rem;
+  }
   .form-title {
     font-size: 1.7rem;
+  }
+  .form {
+    padding: 0 0.5rem;
   }
   .form-label {
     flex: 0 0 200px;

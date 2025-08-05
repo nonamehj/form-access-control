@@ -30,6 +30,14 @@ const Login = () => {
           </div>
           <button className="login-btn form-btn">로그인</button>
         </form>
+        <div className="login-helper-links">
+          <Link to="/login/find-id" className="find-id">
+            아이디 찾기
+          </Link>
+          <Link to="/login/find-password" className="find-password">
+            비밀번호 찾기
+          </Link>
+        </div>
         <div className="login-register-wrapper">
           <p className="login-readme">계정이 없으신가요? </p>
           <Link to="/login/agree" className="login-register">
