@@ -1,6 +1,35 @@
-import { idRegex, pwRegex, emailRegex, nicknameRegex } from "./regex";
+import {
+  idRegex,
+  pwRegex,
+  emailRegex,
+  nicknameRegex,
+  koreanNameRegex,
+  englishNameRegex,
+} from "./regex";
 
 const validateUserData = (userData, users = []) => {
+  if (!userData.name) {
+    return "이름을 입력해 주세요";
+  }
+
+  // if (!nameRegex.test(userData.name)) {
+  //   return "올바른 이름을 입력해주세요"
+  // }
+  if (/\s/.test(userData.name)) {
+    return "이름에 공백 없이 입력해 주세요";
+  }
+  if (
+    userData.nationality === "korean" &&
+    !koreanNameRegex.test(userData.name)
+  ) {
+    return "이름은 한글로 2자 이상 올바르게 입력해 주세요";
+  }
+  if (
+    userData.nationality === "foreigner" &&
+    !englishNameRegex.test(userData.name)
+  ) {
+    return "이름은 영문으로 2자 이상 올바르게 입력해 주세요";
+  }
   if (!userData.id || !idRegex.test(userData.id)) {
     return "아이디는 소문자 4~16자여야 합니다";
   }

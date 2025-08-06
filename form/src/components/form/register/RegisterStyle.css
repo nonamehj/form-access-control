@@ -25,6 +25,10 @@
   align-items: center;
 }
 
+.form-center input,
+.form-select {
+  font-size: 0.85rem;
+}
 .form-select {
   display: flex;
   justify-content: center;
@@ -123,6 +127,10 @@ input[type="radio"] {
   .register-container {
     max-width: 500px;
   }
+  .form-center input,
+  .form-select {
+    font-size: 0.85rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -134,5 +142,9 @@ input[type="radio"] {
   }
   .register-container {
     max-width: 600px;
+  }
+  .form-center input,
+  .form-select {
+    font-size: 0.95rem;
   }
 }

@@ -1,6 +1,7 @@
 const formatFormData = (formData) => {
   const obj = Object.fromEntries(formData);
   return {
+    name: obj.name?.trim() || "",
     id: obj.id?.trim() || "",
     email: obj.email?.trim() || "",
     password: obj.password?.trim() || "",

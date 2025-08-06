@@ -31,6 +31,7 @@ const EditUserForm = () => {
     email: currentUser.email,
     gender: currentUser.gender || "",
     id: currentUser.id,
+    name: currentUser.name,
     nationality: currentUser.nationality || "",
     nickname: currentUser.nickname,
     password: "",
@@ -85,6 +86,19 @@ const EditUserForm = () => {
         <form className="edit-form form" onSubmit={onSubmit}>
           <div className="form-row-wrapper edit-row-wrapper">
             <div className="form-row edit-row">
+              <div className="form-center form-center-name">
+                <div className="form-label form-name">
+                  <FaUser className="form-icon" />
+                  <label htmlFor="name">이름</label>
+                </div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="input-name"
+                  readOnly
+                />
+              </div>
               <div className="form-center form-center-id">
                 <div className="form-label form-id">
                   <FaUser className="form-icon" />

@@ -11,11 +11,14 @@ import {
   EditUserPage,
   DeleteUserPage,
   ContactPage,
+  FindIdPage,
+  FindPasswordPage,
 } from "./pages";
 import {
   SharedLayout,
   SharedLayoutPages,
   ProtectedLayout,
+  SharedLayoutFindPages,
 } from "./sharedLayout";
 
 function App() {
@@ -52,9 +55,11 @@ function App() {
           <Route index element={<LoginPage />} />
           <Route path="agree" element={<AgreementPage />} />
           <Route path="signup" element={<RegisterPage />} />
-          <Route path="find-id" element={<div>find id</div>} />
-          <Route path="find-password" element={<div>find password</div>} />
-          <Route path="reset-password" element={<div>reset password</div>} />
+          <Route element={<SharedLayoutFindPages />}>
+            <Route path="find-id" element={<FindIdPage />} />
+            <Route path="find-password" element={<FindPasswordPage />} />
+            <Route path="reset-password" element={<div>reset password</div>} />
+          </Route>
         </Route>
         <Route
           path="/user"

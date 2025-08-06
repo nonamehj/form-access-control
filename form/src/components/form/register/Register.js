@@ -96,6 +96,16 @@ const Register = () => {
       )}`;
     }
   };
+
+  // const validateIdInput = (value) => {
+  //   const value = e.target.value;
+  //   const validIdRegex = /^[a-z]/;
+  //   if (!validIdRegex.test(value)) {
+  //     alert("아이디는 소문자로 입력해주세요");
+  //     return false;
+  //   }
+  //   return true;
+  // };
   useEffect(() => {
     if (!agreement) {
       alert("회원가입을 위해서는 약관 동의가 필요합니다");
@@ -109,6 +119,18 @@ const Register = () => {
         <form className="register-form form" onSubmit={onSubmit}>
           <div className="form-row-wrapper register-row-wrapper">
             <div className="form-row register-row">
+              <div className="form-center form-center-name">
+                <div className="form-label form-name">
+                  <FaUser className="form-icon" />
+                  <label htmlFor="name">이름</label>
+                </div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="input-name"
+                />
+              </div>
               <div className="form-center form-center-id">
                 <div className="form-label form-id">
                   <FaUser className="form-icon" />

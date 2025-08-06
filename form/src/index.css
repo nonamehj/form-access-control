@@ -98,6 +98,7 @@ main {
   margin-bottom: 0.5rem;
   padding: 0 0.25rem;
 }
+
 .form-label {
   display: flex;
   align-items: center;
@@ -121,8 +122,12 @@ input {
   border: 1px solid rgba(46, 43, 43, 0.5);
   border-radius: 0.25rem;
 }
-input:focus {
-  border: 1px solid rgba(46, 43, 43, 1);
+.form-center input {
+  font-size: 0.85rem;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #000;
 }
 .form-btn {
   display: flex;
@@ -173,6 +178,7 @@ input:focus {
   .form-label {
     flex: 0 0 200px;
   }
+
   .form-btn {
     font-size: 1.1rem;
   }
