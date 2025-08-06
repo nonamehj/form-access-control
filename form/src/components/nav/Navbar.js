@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleClick = (type) => {
     if (type === "logout") {
-      alert("로그아웃이 되었습니다");
+      alert("로그아웃이 되었습니다. 다음에 또 만나요!");
       setCurrentUser({});
     }
     handleResetStories(type);

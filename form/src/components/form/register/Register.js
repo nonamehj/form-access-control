@@ -8,6 +8,7 @@ import {
   FaUser,
   FaRegAddressCard,
   MdEmail,
+  FaIdBadge,
 } from "../../../utils/icons";
 import { useFormContext } from "./../../../formContext";
 import { useNavigate } from "react-router-dom";
@@ -57,6 +58,7 @@ const Register = () => {
 
     console.log("register 컴포넌트 ", formResult);
     if (formResult) {
+      alert("회원가입이 완료되었습니다. 로그인 후 이용해 주세요");
       navigate("/");
     }
   };
@@ -133,7 +135,7 @@ const Register = () => {
               </div>
               <div className="form-center form-center-id">
                 <div className="form-label form-id">
-                  <FaUser className="form-icon" />
+                  <FaIdBadge className="form-icon" />
                   <label htmlFor="id">아이디</label>
                 </div>
                 <input

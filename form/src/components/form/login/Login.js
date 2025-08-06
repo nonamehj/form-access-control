@@ -10,6 +10,7 @@ const Login = () => {
 
     const formResult = handleSubmit(e, "login", formData);
     if (formResult) {
+      alert("환영합니다! 로그인에 성공했습니다");
       navigate("/");
     }
   };

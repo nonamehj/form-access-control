@@ -11,6 +11,7 @@ import {
   BsPhone,
   RiLockPasswordLine,
   AiOutlinePhone,
+  FaIdBadge,
 } from "../../../../utils/icons";
 
 const telecomOptions = [
@@ -101,7 +102,7 @@ const EditUserForm = () => {
               </div>
               <div className="form-center form-center-id">
                 <div className="form-label form-id">
-                  <FaUser className="form-icon" />
+                  <FaIdBadge className="form-icon" />
                   <label htmlFor="id">아이디</label>
                 </div>
                 <input

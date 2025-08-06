@@ -6,6 +6,7 @@ import {
   FaUserSlash,
   FaUser,
   FaRegAddressCard,
+  FaIdBadge,
 } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { MdManageAccounts, MdEmail } from "react-icons/md";
@@ -24,4 +25,5 @@ export {
   MdEmail,
   FaUser,
   FaRegAddressCard,
+  FaIdBadge,
 };
