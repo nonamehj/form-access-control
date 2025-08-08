@@ -43,7 +43,7 @@ const FormProvider = ({ children }) => {
   console.log("context user", users);
   console.log("context current", currentUser);
   const handleSubmit = useCallback(
-    (e, type, formData) => {
+    (e, type, formData, matchedUser) => {
       e.preventDefault();
 
       let formResult;
@@ -65,6 +65,10 @@ const FormProvider = ({ children }) => {
       }
       if (type === "delete") {
         formResult = submitDeleteForm(formData);
+        return formResult;
+      }
+      if (type === "reset") {
+        formResult = submitResetPwForm(formData, matchedUser);
         return formResult;
       }
     },
@@ -144,6 +148,22 @@ const FormProvider = ({ children }) => {
     setCurrentUser({});
     setUsers(deleteUsers);
     return true;
+  };
+
+  const submitResetPwForm = (formData, matchedUser) => {
+    const userData = Object.fromEntries(formData);
+    const changeUserInfo = users.map((user) => {
+      if (user.id === matchedUser.id) {
+        return { ...user, password: userData.password };
+      }
+      return user;
+    });
+    console.log("context matchedUser", matchedUser);
+    // console.log("reset userData", userData);
+    console.log("change", changeUserInfo);
+    // setUsers(changeUserInfo);
+
+    // return true;
   };
 
   const formmatPhoneNumber = (phoneNumber) => {

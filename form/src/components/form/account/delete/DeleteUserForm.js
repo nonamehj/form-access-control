@@ -23,7 +23,7 @@ const DeleteUserForm = () => {
     const formResult = handleSubmit(e, "delete", formData);
     if (formResult) {
       alert("회원정보를 탈퇴하였습니다");
-      navigate("/");
+      navigate("/", { replace: true });
     }
   };
 

@@ -59,7 +59,7 @@ const Register = () => {
     console.log("register 컴포넌트 ", formResult);
     if (formResult) {
       alert("회원가입이 완료되었습니다. 로그인 후 이용해 주세요");
-      navigate("/");
+      navigate("/", { replace: true });
     }
   };
 

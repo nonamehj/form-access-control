@@ -8,6 +8,7 @@ import DeleteUserPage from "./DeleteUserPage";
 import ContactPage from "./ContactPage";
 import FindIdPage from "./FindIdPage";
 import FindPasswordPage from "./FindPasswordPage";
+import ResetPasswordPage from "./ResetPasswordPage";
 export {
   HomePage,
   LoginPage,
@@ -19,4 +20,5 @@ export {
   ContactPage,
   FindIdPage,
   FindPasswordPage,
+  ResetPasswordPage,
 };

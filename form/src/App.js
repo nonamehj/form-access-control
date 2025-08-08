@@ -13,6 +13,7 @@ import {
   ContactPage,
   FindIdPage,
   FindPasswordPage,
+  ResetPasswordPage,
 } from "./pages";
 import {
   SharedLayout,
@@ -58,7 +59,7 @@ function App() {
           <Route element={<SharedLayoutFindPages />}>
             <Route path="find-id" element={<FindIdPage />} />
             <Route path="find-password" element={<FindPasswordPage />} />
-            <Route path="reset-password" element={<div>reset password</div>} />
+            <Route path="reset-password" element={<ResetPasswordPage />} />
           </Route>
         </Route>
         <Route

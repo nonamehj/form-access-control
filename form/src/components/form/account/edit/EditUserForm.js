@@ -50,7 +50,7 @@ const EditUserForm = () => {
     const formResult = handleSubmit(e, "edit", editUser);
     if (formResult) {
       alert("회원정보를 수정되었습니다");
-      navigaate("/user");
+      navigaate("/user", { replace: true });
     } else {
       alert("수정에 실패했습니다. 다시 시도해주세요 ");
     }
@@ -97,6 +97,7 @@ const EditUserForm = () => {
                   id="name"
                   name="name"
                   className="input-name"
+                  value={editUser.name}
                   readOnly
                 />
               </div>

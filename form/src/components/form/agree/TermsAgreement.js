@@ -52,7 +52,7 @@ const TermsAgreement = () => {
     const formResult = handleSubmit(e, "agree", formData);
     // console.log("agreeFormResult", formResult);
     if (formResult) {
-      navigate("/login/signup");
+      navigate("/login/signup", { replace: true });
     }
   };
   useEffect(() => {
