@@ -40,8 +40,8 @@ const FormProvider = ({ children }) => {
   // const [agreement, setAgreement] = useState(null);
   const [agreement, setAgreement] = useState(getAgreement());
   // localStorage.clear();
-  console.log("context user", users);
-  console.log("context current", currentUser);
+  console.log("context updateUser", users);
+  // console.log("context current", currentUser);
   const handleSubmit = useCallback(
     (e, type, formData, matchedUser) => {
       e.preventDefault();
@@ -150,20 +150,17 @@ const FormProvider = ({ children }) => {
     return true;
   };
 
-  const submitResetPwForm = (formData, matchedUser) => {
+  const submitResetPwForm = (formData, findUser) => {
     const userData = Object.fromEntries(formData);
-    const changeUserInfo = users.map((user) => {
-      if (user.id === matchedUser.id) {
+
+    const changeUserPW = users.map((user) => {
+      if (user.id === findUser.id) {
         return { ...user, password: userData.password };
       }
       return user;
     });
-    console.log("context matchedUser", matchedUser);
-    // console.log("reset userData", userData);
-    console.log("change", changeUserInfo);
-    // setUsers(changeUserInfo);
-
-    // return true;
+    setUsers(changeUserPW);
+    return true;
   };
 
   const formmatPhoneNumber = (phoneNumber) => {

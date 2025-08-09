@@ -27,7 +27,8 @@ const FindPassword = () => {
       return;
     }
     navigate("/login/reset-password", {
-      state: { matchedUser },
+      // state: {  findUser: matchedUser },
+      state: matchedUser,
       replace: true,
     });
   };
