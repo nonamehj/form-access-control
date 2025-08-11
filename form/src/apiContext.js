@@ -68,7 +68,6 @@ const ApiProvider = ({ children }) => {
     dispatch({ type: HANDLE_PAGE, payload: value });
   }, []);
   useEffect(() => {
-    console.log("context useEffect 확인용", state.query, state.page);
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`);
   }, [state.query, state.page, fetchStories]);
 

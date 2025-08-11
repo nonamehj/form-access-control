@@ -13,15 +13,12 @@
 .agree-container {
   width: 100%;
   margin: 1rem 0;
-  border: 1px solid rgba(46, 43, 43, 0.5);
+  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   border-radius: 0.25rem;
   background-color: #fff;
-  /* border: 1px solid blue; */
 }
-
 .agree-row-wrapper {
   align-items: stretch;
-  /* border: 1px solid green; */
 }
 .agree-row-wrapper h4 {
   /* padding: 0.5rem 0.25rem; */

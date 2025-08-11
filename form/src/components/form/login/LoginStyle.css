@@ -7,7 +7,7 @@
 .login-container {
   width: 100%;
   margin: 1rem 0;
-  border: 1px solid rgba(46, 43, 43, 0.5);
+  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   border-radius: 0.25rem;
   background-color: #fff;
 }
@@ -15,7 +15,6 @@
 /*계정삭제하고 가운데 정렬이 괜찮은지 그냥 위에 놓는게 좋은지 */
 /*위에 놓을경우  아래 클래스 삭제*/
 .login-row-wrapper {
-  /* justify-content: center; */
   align-items: center;
 }
 .login-row {
@@ -39,32 +38,22 @@
   width: 100%;
   font-size: 1rem;
   font-weight: bold;
-  /* border: 1px solid red; */
 }
-.login-btn {
-  /* border: 1px solid red; */
-}
+
 .login-helper-links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* margin: 0 0.25rem; */
-  /* margin: 0.25rem; */
   margin: 0 0.25rem 0.25rem;
-
-  /* border: 1px solid blue; */
 }
 .find-id,
 .find-password {
-  /* color: #007bff; */
   margin: 0.25rem;
   padding: 0.25rem;
-  /* padding: 0.5rem; */
   font-size: 0.85rem;
   font-weight: bold;
   color: #0066cc;
   cursor: pointer;
-  /* border: 1px solid blue; */
 }
 .login-register-wrapper {
   display: flex;
@@ -74,26 +63,16 @@
   margin: 0.25rem;
   font-size: 0.85rem;
   font-weight: bold;
-  /* border: 1px solid red; */
 }
 
 .login-register {
   background-color: transparent;
   border-color: transparent;
-  /* color: blue; */
   color: #0066cc;
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-  .login-section {
-    /* max-width: 350px; */
-    /* max-height: 400px; */
-
-    /**/
-    /* max-width: 400px; */
-    /* max-height: 450px; */
-  }
   .login-container {
     max-width: 400px;
     max-height: 450px;
@@ -109,14 +88,6 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .login-section {
-    /* max-width: 400px; */
-    /* max-height: 450px; */
-
-    /**/
-    /* max-width: 450px; */
-    /* max-height: 500px; */
-  }
   .login-container {
     max-width: 450px;
     max-height: 500px;

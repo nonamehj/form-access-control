@@ -11,21 +11,45 @@ const agreementInitialState = {
   optional1: false,
   optional2: false,
 };
+// const agreementInitialState = {
+//   agreeAll: false,
+//   agreeRequired: {
+//     privacy: false,
+//     terms: false,
+//     identity: false,
+//   },
+//   agreeOptional: {
+//     event: false,
+//     promo: false,
+//   },
+// };
 const TermsAgreement = () => {
   // const { handleSubmit, agreement, setAgreement } = useFormContext();
   const { handleSubmit } = useFormContext();
   const [agreement, setAgreement] = useState(agreementInitialState);
   const navigate = useNavigate();
   const handleAllChange = (e) => {
-    const isChecked = e.target.checked;
+    const checked = e.target.checked;
     setAgreement({
-      all: isChecked,
-      required1: isChecked,
-      required2: isChecked,
-      required3: isChecked,
-      optional1: isChecked,
-      optional2: isChecked,
+      all: checked,
+      required1: checked,
+      required2: checked,
+      required3: checked,
+      optional1: checked,
+      optional2: checked,
     });
+    // setAgreement({
+    //   agreeAll : checked,
+    //   agreeRequired : {
+    //     privacy : checked,
+    //     terms : checked,
+    //     identity : checked
+    //   },
+    //   agreeOptional : {
+    //     event : checked,
+    //     promo : checked
+    //   }
+    // })
   };
 
   const handleCheckboxChange = (e) => {
@@ -38,19 +62,24 @@ const TermsAgreement = () => {
 
     updated.all = allRequriedChecked && allSelectedChecked;
     setAgreement(updated);
-  };
 
-  // const handleClick = (e) => {
-  //   if (!agreement.required1 || !agreement.required2 || !agreement.required3) {
-  //     e.preventDefault();
-  //     alert("필수 약관에 모두 동의해야 합니다");
-  //   }
-  // };
+    // const {name, checked, value } = e.target;
+    // if(name === "agreeRequired") {
+    //   setAgreement((prev)=>({
+    //     ...prev, agreeRequired : {...prev.agreeRequired, [value] : checked}}))
+    // } else if (name === "agreeOptional") {
+    //   setAgreement((prev)=>({
+    //     ...prev, agreeOptional : {...prev.agreeOptional, [value] : checked}
+    //   }))
+    // } else if (name === "agreeAll") {
+
+    // }
+  };
 
   const onSubmit = (e) => {
     const formData = new FormData(e.currentTarget);
     const formResult = handleSubmit(e, "agree", formData);
-    // console.log("agreeFormResult", formResult);
+    console.log("agreeFormResult", formResult);
     if (formResult) {
       navigate("/login/signup", { replace: true });
     }
@@ -79,24 +108,14 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="all"
+                  // name="agreeAll"
                   className="agree-input"
                   checked={agreement.all}
                   onChange={handleAllChange}
+                  value="all"
                 />
-                전체동의
+                전체 약관 동의
               </label>
-
-              {/* <input
-                type="checkbox"
-                id="all"
-                name="all"
-                className="agree-input"
-                checked={agreement.all}
-                onChange={handleAllChange}
-              />
-              <label htmlFor="all" className="all-label">
-                전체동의
-              </label> */}
             </div>
             <hr />
             <h4>필수 항목</h4>
@@ -105,32 +124,35 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="required1"
+                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required1}
                   onChange={handleCheckboxChange}
+                  value="privacy"
                 />
                 (필수) 개인정보 수집 및 이용 동의
               </label>
-              {/* <br /> */}
-
               <label className="agree-label required-label">
                 <input
                   type="checkbox"
                   name="required2"
+                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required2}
                   onChange={handleCheckboxChange}
+                  value="terms"
                 />
                 (필수) 서비스 이용 약관 동의
               </label>
-              {/* <br /> */}
               <label className="agree-label required-label">
                 <input
                   type="checkbox"
                   name="required3"
+                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required3}
                   onChange={handleCheckboxChange}
+                  value="identity"
                 />
                 (필수) 본인 명의 가입 동의
               </label>
@@ -142,22 +164,25 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="optional1"
+                  // name="agreeOptional"
                   className="agree-input"
                   checked={agreement.optional1}
                   onChange={handleCheckboxChange}
+                  value="event"
                 />
-                (선택) 마케팅 정보 수신 동의
+                (선택) 이벤트 정보 수신 동의
               </label>
-              {/* <br /> */}
               <label className="agree-label optional-label">
                 <input
                   type="checkbox"
                   name="optional2"
+                  // name="agreeOptional"
                   className="agree-input"
                   checked={agreement.optional2}
                   onChange={handleCheckboxChange}
+                  value="promo"
                 />
-                (선택) 광고성 정보 수신 동의
+                (선택) 프로모션 정보 수신 동의
               </label>
             </div>
             <hr />

@@ -12,11 +12,11 @@ const getLocalStorage = () => {
   let users = localStorage.getItem("users");
   return users ? JSON.parse(users) : [];
 };
-const getAgreement = () => {
+const getAgreementStorage = () => {
   let data = localStorage.getItem("agreement");
   return data ? JSON.parse(data) : {};
 };
-const getCurrentUser = () => {
+const getCurrentUserStorage = () => {
   let user = localStorage.getItem("currentUser");
   return user ? JSON.parse(user) : {};
 };
@@ -30,15 +30,8 @@ const getCurrentUser = () => {
 // };
 const FormProvider = ({ children }) => {
   const [users, setUsers] = useState(getLocalStorage());
-  // const [currentUser, setCurrentUser] = useState(null);
-  // const [loggedIn, setLoggedIn] = useState(null);
-  const [currentUser, setCurrentUser] = useState(getCurrentUser());
-  // const [agreement, setAgreement] = useState(() => {
-  //   const agree = localStorage.getItem("agreement");
-  //   return agree ? JSON.parse(agree) : agreementInitialState;
-  // });
-  // const [agreement, setAgreement] = useState(null);
-  const [agreement, setAgreement] = useState(getAgreement());
+  const [currentUser, setCurrentUser] = useState(getCurrentUserStorage());
+  const [agreement, setAgreement] = useState(getAgreementStorage());
   // localStorage.clear();
   console.log("context updateUser", users);
   // console.log("context current", currentUser);
@@ -50,6 +43,7 @@ const FormProvider = ({ children }) => {
       if (type === "login") {
         formResult = submitLoginForm(formData);
         return formResult;
+        // return submitLogtinForm(formData)
       }
       if (type === "agree") {
         formResult = submitAgreeForm(formData);
@@ -99,15 +93,20 @@ const FormProvider = ({ children }) => {
 
   const submitAgreeForm = (formData) => {
     const formAgreement = Object.fromEntries(formData);
-    // console.log("agreement", agreement);
+    console.log("context test agreement", agreement);
+    // const allRequriedChecked =
+    //   formAgreement.required1 === "on" &&
+    //   formAgreement.required2 === "on" &&
+    //   formAgreement.required3 === "on";
     const allRequriedChecked =
-      formAgreement.required1 === "on" &&
-      formAgreement.required2 === "on" &&
-      formAgreement.required3 === "on";
+      formAgreement.required1 === "privacy" &&
+      formAgreement.required2 === "terms" &&
+      formAgreement.required3 === "identity";
     // console.log("allRequriedChecked", allRequriedChecked);
     // const allSelectedChecked = updated.optional1 && updated.optional2;
     console.log("formAgreement", formAgreement);
-    if (formAgreement.all === "on" || allRequriedChecked) {
+    // if (formAgreement.all === "on" || allRequriedChecked) {
+    if (formAgreement.all === "all" || allRequriedChecked) {
       setAgreement(formAgreement);
       return true;
     } else {
@@ -127,6 +126,7 @@ const FormProvider = ({ children }) => {
     // }
     newUser.agreement = agreement;
     setUsers((user) => [...user, newUser]);
+    setAgreement({});
     return true;
   };
   const submitEditForm = (formData) => {

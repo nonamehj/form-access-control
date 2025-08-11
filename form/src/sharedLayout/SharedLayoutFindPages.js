@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "../components/form/recovery/SharedStyle.css";
 
 const SharedLayoutFindPages = () => {
@@ -17,7 +17,7 @@ const SharedLayoutFindPages = () => {
             style={({ isActive }) => {
               return {
                 color: isActive ? "black" : "grey",
-                backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                backgroundColor: isActive ? "#f2f2f2 " : "#fff",
               };
             }}
             className="find-id-link"
