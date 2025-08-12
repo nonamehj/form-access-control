@@ -1,6 +1,6 @@
 import "./FindPasswordStyle.css";
 import { useFormContext } from "./../../../formContext";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import validateFindPwData from "./../../../utils/validateFindPwData";
 const FindPassword = () => {
   const { users } = useFormContext();
@@ -27,7 +27,6 @@ const FindPassword = () => {
       return;
     }
     navigate("/login/reset-password", {
-      // state: {  findUser: matchedUser },
       state: matchedUser,
       replace: true,
     });
@@ -66,12 +65,13 @@ const FindPassword = () => {
           </div>
         </div>
         <div className="find-btn-wrapper">
-          {/* <button className="form-btn" onClick={() => navigate("/login")}>
+          <button
+            type="button"
+            className="form-btn back-btn"
+            onClick={() => navigate("/login")}
+          >
             뒤로가기
-          </button> */}
-          <Link to="/login" className="form-btn">
-            뒤로가기
-          </Link>
+          </button>
           <button className="form-btn find-btn">비밀번호 찾기</button>
         </div>
       </form>

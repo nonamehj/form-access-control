@@ -52,7 +52,7 @@ const EditUserForm = () => {
       alert("회원정보를 수정되었습니다");
       navigaate("/user", { replace: true });
     } else {
-      alert("수정에 실패했습니다. 다시 시도해주세요 ");
+      alert("수정에 실패했습니다. 다시 시도해주세요");
     }
   };
   const handleChange = (e) => {

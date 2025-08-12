@@ -6,12 +6,6 @@ const SharedLayoutFindPages = () => {
     <section className="section layout-section">
       <div className="layout-container form-container">
         <div className="find-links-wrapper">
-          {/* <Link to="/login/find-id" className="find-id-link">
-            아이디 찾기
-          </Link>
-          <Link to="/login/find-password" className="find-password-link">
-            비밀번호 찾기
-          </Link> */}
           <NavLink
             to="/login/find-id"
             style={({ isActive }) => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./TermsAgreementStyle.css";
 
 import { useFormContext } from "./../../../formContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const agreementInitialState = {
   all: false,
   required1: false,

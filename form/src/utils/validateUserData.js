@@ -12,9 +12,6 @@ const validateUserData = (userData, users = []) => {
     return "이름을 입력해 주세요";
   }
 
-  // if (!nameRegex.test(userData.name)) {
-  //   return "올바른 이름을 입력해주세요"
-  // }
   if (/\s/.test(userData.name)) {
     return "이름에 공백 없이 입력해 주세요";
   }
@@ -34,7 +31,6 @@ const validateUserData = (userData, users = []) => {
     return "아이디는 소문자 4~16자여야 합니다";
   }
   const isDuplicateId = users.some((user) => user.id === userData.id);
-
   if (isDuplicateId) {
     return "이미 사용중인 아이디입니다";
   }
@@ -46,6 +42,12 @@ const validateUserData = (userData, users = []) => {
   }
   if (!userData.nickname || !nicknameRegex.test(userData.nickname)) {
     return "닉네임은 2~10자, 한글, 영문, 숫자만 가능합니다";
+  }
+  const isDuplicateNickname = users.some(
+    (user) => user.nickname === userData.nickname
+  );
+  if (isDuplicateNickname) {
+    return "이미 사용중인 닉네임입니다";
   }
   if (!userData.birth) return "생년월일을 입력하세요";
   if (!userData.telecom) return "통신사를 선택하세요";

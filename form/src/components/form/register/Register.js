@@ -47,8 +47,6 @@ const Register = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const userData = formatFormData(formData);
-    // const userData = Object.fromEntries(formData);
-    console.log("regi", userData);
     const error = validateUserData(userData, users);
     if (error) {
       alert(error);
@@ -56,7 +54,6 @@ const Register = () => {
     }
     const formResult = handleSubmit(e, "register", formData);
 
-    console.log("register 컴포넌트 ", formResult);
     if (formResult) {
       alert("회원가입이 완료되었습니다. 로그인 후 이용해 주세요");
       navigate("/", { replace: true });
@@ -64,7 +61,6 @@ const Register = () => {
   };
 
   const handleBirthChange = (e) => {
-    // e.target.value = e.target.value.replace(/\D/g, "");
     let value = e.target.value.replace(/\D/g, "");
     if (value.length === 8) {
       value = `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(6)}`;
@@ -99,15 +95,6 @@ const Register = () => {
     }
   };
 
-  // const validateIdInput = (value) => {
-  //   const value = e.target.value;
-  //   const validIdRegex = /^[a-z]/;
-  //   if (!validIdRegex.test(value)) {
-  //     alert("아이디는 소문자로 입력해주세요");
-  //     return false;
-  //   }
-  //   return true;
-  // };
   useEffect(() => {
     if (!agreement) {
       alert("회원가입을 위해서는 약관 동의가 필요합니다");
@@ -173,7 +160,6 @@ const Register = () => {
                   id="email"
                   name="email"
                   className="form-input input-email"
-                  // placeholder="이메일주소 (비밀번호 찾기 등 본인 확인용)"
                   placeholder="비밀번호 찾기 등 본인 확인용"
                   onChange={(e) => e.target.value.toLowerCase()}
                   autoCapitalize="off"

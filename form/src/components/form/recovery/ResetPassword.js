@@ -9,9 +9,6 @@ const ResetPassword = () => {
   const location = useLocation();
   const findUser = location.state;
   const navigate = useNavigate();
-  // console.log("location", location.state);
-  console.log("test reset", findUser);
-  console.log("location test", location.state);
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);

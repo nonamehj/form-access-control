@@ -1,7 +1,6 @@
 import "./SharedStyle.css";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useFormContext } from "./../../../formContext";
-
 import validateFindIdData from "../../../utils/validateFindIdData";
 const FindId = () => {
   const { users } = useFormContext();
@@ -24,7 +23,6 @@ const FindId = () => {
     }
 
     alert(`아이디는 ${matchedUser.id} 입니다`);
-
     navigate("/login");
   };
 
@@ -61,14 +59,11 @@ const FindId = () => {
         <div className="find-btn-wrapper">
           <button
             type="button"
-            className="form-btn"
+            className="form-btn back-btn"
             onClick={() => navigate("/login")}
           >
             뒤로가기
           </button>
-          {/* <Link to="/login" className="form-btn">
-            뒤로가기
-          </Link> */}
           <button className="form-btn find-btn">아이디 찾기</button>
         </div>
       </form>
