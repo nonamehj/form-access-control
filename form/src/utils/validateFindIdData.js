@@ -1,7 +1,7 @@
-import { nameRegex, koreanNameRegex } from "./regex";
+import { nameRegex } from "./regex";
 
 const validateFindIdData = (userData) => {
-  const { name, phone } = userData;
+  const { name, phone, birth } = userData;
   if (!name) {
     return "이름을 입력해주세요";
   }
@@ -9,6 +9,11 @@ const validateFindIdData = (userData) => {
   if (!nameRegex.test(name)) {
     return "이름은 한글 또는 영문으로 입력해주세요";
   }
+
+  if (!birth) {
+    return "생년월일을 입력해주세요";
+  }
+
   if (!phone) {
     return "휴대전화 번호를 입력해주세요";
   }

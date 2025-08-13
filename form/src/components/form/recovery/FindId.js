@@ -15,7 +15,7 @@ const FindId = () => {
       return;
     }
     const matchedUser = users.find(
-      (user) => user.name === userData.name && user.phone === userData.phone
+      (user) => user.name === userData.name && user.phone === userData.phone && user.birth === userData.birth
     );
     if (!matchedUser) {
       alert("정보가 일치하지 않습니다");
@@ -34,6 +34,14 @@ const FindId = () => {
     e.target.value = value;
   };
 
+  const handleBirthChange = (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value.length === 8) {
+      value = `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(6)}`;
+    }
+    e.target.value = value;
+  };
+
   return (
     <div className="layout-wrapper find-id-wrapper">
       <h3 className="find-id-title form-title">아이디 찾기</h3>
@@ -42,6 +50,10 @@ const FindId = () => {
           <div className="form-row find-row">
             <label htmlFor="name">이름</label>
             <input type="text" id="name" name="name" />
+          </div>
+          <div className="form-row find-row">
+            <label htmlFor="birth">생년월일</label>
+            <input type="text" id="birth" name="birth" placeholder="숫자만 입력해주세요" maxLength={10} onChange={handleBirthChange}/>
           </div>
           <div className="form-row find-row">
             <label htmlFor="phone">휴대전화 번호</label>
