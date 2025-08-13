@@ -10,8 +10,8 @@ const SharedLayoutFindPages = () => {
             to="/login/find-id"
             style={({ isActive }) => {
               return {
-                color: isActive ? "black" : "grey",
-                backgroundColor: isActive ? "#f2f2f2 " : "#fff",
+                color: isActive ? "#fff" : "#495057",
+                backgroundColor: isActive ? "#495057 " : "#dee2e6",
               };
             }}
             className="find-id-link"
@@ -22,8 +22,10 @@ const SharedLayoutFindPages = () => {
             to="/login/find-password"
             style={({ isActive }) => {
               return {
-                color: isActive ? "black" : "grey",
-                backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                // color: isActive ? "black" : "grey",
+                // backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                color: isActive ? "#fff" : "#495057",
+                backgroundColor: isActive ? "#495057 " : "#dee2e6",
               };
             }}
             className="find-password-link"

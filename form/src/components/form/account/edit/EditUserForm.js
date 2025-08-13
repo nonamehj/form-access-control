@@ -273,7 +273,7 @@ const EditUserForm = () => {
               onClick={() => navigaate(-1)}
               className="form-btn edit-back-btn"
             >
-              뒤로가기
+              취소
             </button>
             <button className="edit-btn form-btn">수정완료</button>
           </div>

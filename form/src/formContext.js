@@ -33,8 +33,8 @@ const FormProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(getCurrentUserStorage());
   const [agreement, setAgreement] = useState(getAgreementStorage());
   // localStorage.clear();
-  console.log("context updateUser", users);
-  // console.log("context current", currentUser);
+  // console.log("context updateUser", users);
+  console.log("context current", currentUser);
 
   const submitLoginForm = useCallback(
     (formData) => {

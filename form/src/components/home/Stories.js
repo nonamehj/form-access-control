@@ -44,14 +44,15 @@ const Stories = () => {
                       rel="noopener noreferrer"
                     >
                       원문 보기
-                      {/* read more */}
                     </a>
-                    <button
-                      className="remove-btn"
-                      onClick={() => removeStory(objectID)}
-                    >
-                      삭제
-                    </button>
+                    {currentUser.loggedIn && (
+                      <button
+                        className="remove-btn"
+                        onClick={() => removeStory(objectID)}
+                      >
+                        삭제
+                      </button>
+                    )}
                   </div>
                 </article>
               );

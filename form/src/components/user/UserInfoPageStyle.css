@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   background-color: #f1f3f5;
-  /* border: 1px solid red; */
 }
 .user-info-container {
   flex: 1;
@@ -20,18 +19,17 @@
 .user-info-profile {
   display: flex;
   align-items: center;
-  padding: 1rem 0.5rem;
-  /* border: 1px solid red; */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .user-icon {
   margin: 0 0.5rem;
   font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 .user-info-nickname {
   margin-left: 0.5rem;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 .user-information-links {
   flex: 1;
@@ -54,34 +52,25 @@
 .delete-icon,
 .contact-icon {
   margin: 0 0.5rem;
-  /* border: 1px solid red; */
 }
 .user-information-links a:hover {
   background-color: #f2f2f2;
   /* background-color: #fefefe; */
 }
 @media screen and (max-width: 767px) {
-  .user-info-section {
-    /* max-width: 400px; */
-    /* min-height: 450px; */
-    /* max-height: 450px; */
-  }
   .user-info-container {
-    /* max-width: 400px; */
+    max-width: 400px;
     /* min-height: 450px; */
     /* max-height: 450px; */
-    /* max-width: 400px; */
-    max-width: 400px;
-    /* min-height: 500px; */
-    /* max-height: 500px; */
-    min-height: 450px;
-    max-height: 450px;
+    min-height: 500px;
+    max-height: 500px;
   }
   .user-icon {
     font-size: 1.5rem;
   }
   .user-info-nickname {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: 1.5rem;
   }
   .user-infomation-links a {
     font-size: 1rem;
@@ -89,27 +78,18 @@
 }
 
 @media screen and (min-width: 768px) {
-  .user-info-section {
-    /* max-width: 400px; */
-    /* min-height: 450px; */
-    /* max-height: 450px; */
-  }
   .user-info-container {
-    /* max-width: 400px; */
-    /* min-height: 450px; */
-    /* max-height: 450px; */
     max-width: 450px;
-    /* min-height: 550px; */
-    /* max-height: 550px; */
-    min-height: 500px;
-    max-height: 500px;
+    /* min-height: 500px; */
+    /* max-height: 500px; */
+    min-height: 550px;
+    max-height: 550px;
   }
   .user-icon {
     font-size: 1.75rem;
   }
   .user-info-nickname {
-    /* font-size: 1.6rem; */
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   .user-infomation-links a {
     font-size: 1.1rem;

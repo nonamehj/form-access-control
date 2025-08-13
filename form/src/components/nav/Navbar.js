@@ -28,7 +28,6 @@ const Navbar = () => {
             <p className="current-user">{`${currentUser.nickname} 님`}</p>
             <div className="nav-btn user-btn">
               <Link to="/user" className="nav-profile-btn">
-                {" "}
                 <MdManageAccounts className="profile-icon" />
               </Link>
             </div>
