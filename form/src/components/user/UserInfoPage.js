@@ -24,7 +24,7 @@ const UserInfoPage = () => {
             <FaEdit className="edit-icon" /> <span>개인정보 수정</span>
           </Link>
           <Link to="/user/contact">
-            <AiOutlineMail className="contact-icon" /> <span>문의하기</span>
+            <AiOutlineMail className="contact-icon" /> <span>문의 하기</span>
           </Link>
           <Link to="/user/delete">
             <FaUserSlash className="delete-icon" /> <span>회원 탈퇴</span>

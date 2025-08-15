@@ -13,22 +13,6 @@ import {
 import { useFormContext } from "./../../../formContext";
 import { useNavigate } from "react-router-dom";
 import { formatFormData, validateUserData } from "../../../utils";
-const groups = [
-  {
-    name: "gender",
-    options: [
-      { label: "남자", value: "male" },
-      { label: "여자", value: "female" },
-    ],
-  },
-  {
-    name: "nationality",
-    options: [
-      { label: "내국인", value: "korean" },
-      { label: "외국인", value: "foreigner" },
-    ],
-  },
-];
 
 const telecomOptions = [
   { value: "", label: "선택" },
@@ -67,32 +51,14 @@ const Register = () => {
     }
     e.target.value = value;
   };
-  const handleBirthBlur = (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    if (value.length === 8) {
-      e.target.value = `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(
-        6
-      )}`;
-    }
-  };
+
   const handlePhoneChange = (e) => {
     let value = e.target.value.replace(/\D/g, "");
-    // if (value.length === 11) {
-    //   value = value.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
-    // }
+
     if (value.length === 11) {
       value = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(7)}`;
     }
     e.target.value = value;
-  };
-
-  const handlePhoneBlur = (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    if (value.length === 11) {
-      e.target.value = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(
-        7
-      )}`;
-    }
   };
 
   useEffect(() => {
@@ -191,17 +157,14 @@ const Register = () => {
                   placeholder="숫자만 입력해주세요 ex) 20250101"
                   className="input-birth"
                   onChange={handleBirthChange}
-                  // onBlur={handleBirthBlur}
                   maxLength={10}
                 />
               </div>
-
               <div className="form-center form-center-telecom">
                 <div className="form-label form-telecom">
                   <BsPhone className="form-icon" />
                   <label htmlFor="telecom">통신사선택</label>
                 </div>
-
                 <select className="form-select" id="telecom" name="telecom">
                   {telecomOptions.map((telecom) => {
                     return (
@@ -249,37 +212,7 @@ const Register = () => {
                     <span>외국인</span>
                   </label>
                 </div>
-                {/* {groups.map((group) => {
-                  return (
-                    <div
-                      key={group.name}
-                      className={`group group-${group.name} form-label form-${group.name}`}
-                    >
-                      {group.options.map((option) => {
-                        return (
-                          <label
-                            key={option.value}
-                            className={`radio-label radio-${option.value}`}
-                          >
-                            <input
-                              type="radio"
-                              name={group.name}
-                              value={option.value}
-                              defaultChecked={
-                                group.name === "nationality" &&
-                                option.value === "korean"
-                              }
-                             
-                            />
-                            <span>{option.label}</span>
-                          </label>
-                        );
-                      })}
-                    </div>
-                  );
-                })} */}
               </div>
-
               <div className="form-center form-center-phone">
                 <div className="form-label form-phone">
                   <AiOutlinePhone className="form-icon" />
@@ -292,7 +225,6 @@ const Register = () => {
                   className="form-input input-phone"
                   placeholder="숫자만 입력하세요"
                   onChange={handlePhoneChange}
-                  // onBlur={handlePhoneBlur}
                   maxLength={13}
                 />
               </div>

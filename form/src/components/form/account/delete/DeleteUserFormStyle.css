@@ -3,25 +3,15 @@
   justify-content: center;
   align-items: center;
   background-color: #f1f3f5;
-  /* border: 1px solid red; */
 }
 .delete-container {
   width: 100%;
   margin: 1rem 0;
-  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
   background-color: #fff;
-  /* border: 1px solid blue; */
 }
 
-/*확인후 로그인하고 가운데 정렬이 괜찮은지 그냥 위에 놓는게 좋은지 */
-/*위에 놓을경우  아래 클래스 삭제*/
-.delete-row-wrapper {
-  /* justify-content: center; */
-  align-items: center;
-  /* border: 1px solid blue; */
-}
 .delete-row {
   border: none;
   flex-direction: column;
@@ -44,24 +34,12 @@
 }
 
 @media screen and (max-width: 767px) {
-  .delete-section {
-    /* max-width: 350px; */
-    /* max-height: 450px; */
-  }
   .delete-container {
     max-width: 400px;
     max-height: 500px;
   }
 }
 @media screen and (min-width: 768px) {
-  .delete-section {
-    /* max-width: 400px; */
-    /* max-height: 500px; */
-
-    /**/
-    /* max-width: 450px; */
-    /* max-height: 550px; */
-  }
   .delete-container {
     max-width: 450px;
     max-height: 550px;

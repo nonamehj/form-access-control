@@ -12,7 +12,6 @@
   width: 100%;
   margin: 1rem 0;
   background-color: #fff;
-  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
 }
@@ -45,7 +44,8 @@
   font-size: 1rem;
   color: #000;
   cursor: pointer;
-  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
 }
 .edit-icon,
@@ -55,13 +55,10 @@
 }
 .user-information-links a:hover {
   background-color: #f2f2f2;
-  /* background-color: #fefefe; */
 }
 @media screen and (max-width: 767px) {
   .user-info-container {
     max-width: 400px;
-    /* min-height: 450px; */
-    /* max-height: 450px; */
     min-height: 500px;
     max-height: 500px;
   }
@@ -69,7 +66,6 @@
     font-size: 1.5rem;
   }
   .user-info-nickname {
-    /* font-size: 1.25rem; */
     font-size: 1.5rem;
   }
   .user-infomation-links a {
@@ -80,8 +76,6 @@
 @media screen and (min-width: 768px) {
   .user-info-container {
     max-width: 450px;
-    /* min-height: 500px; */
-    /* max-height: 500px; */
     min-height: 550px;
     max-height: 550px;
   }

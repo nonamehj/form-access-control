@@ -1,26 +1,16 @@
 .form-section {
   justify-content: center;
   align-items: center;
-  /* margin: 1rem 0; */
   background-color: #f1f3f5;
 }
-.register-section {
-  /* width: 100%; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* background-color: #f1f3f5; */
-  /* border: 1px solid red; */
-}
+
 .register-container {
   width: 100%;
   margin: 1rem 0;
-  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   border-radius: 0.25rem;
   background-color: #fff;
 }
-.register-form {
-  /* border: 1px solid red; */
-}
+
 .register-row-wrapper {
   align-items: center;
 }
@@ -33,7 +23,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0.75rem 0.25rem; */
   padding: 0.75rem 0.5rem;
   width: 100%;
   border: 1px solid rgba(46, 43, 43, 0.5);
@@ -55,8 +44,6 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  /* cursor: pointer; */
-  /* border: 2px solid blue; */
 }
 .group {
   margin: 0;
@@ -67,7 +54,6 @@ input[type="radio"] {
   flex: 1;
   border: 1px solid rgba(46, 43, 43, 0.5);
   border-radius: 0.25rem;
-  /* border: 2px solid red; */
 }
 .group-gender {
   margin-right: 0.25rem;
@@ -83,26 +69,17 @@ input[type="radio"] {
   padding: 0.5rem 0.25rem;
   cursor: pointer;
 }
-.radio-male,
-.radio-korean {
-  /* border-right: 0.5px solid rgba(46, 43, 43, 0.7); */
-}
+
 .radio-label span {
   opacity: 0.5;
 }
-/* .radio-label {
-  opacity: 0.5;
-} */
+
 .radio-label input:checked + span {
   width: 100%;
   text-align: center;
   opacity: 1;
 }
-/* .radio-label input:checked {
-  width: 100%;
-  text-align: center;
-  opacity: 1;
-} */
+
 @media screen and (max-width: 319px) {
   .form-center-identity {
     flex-direction: column;
@@ -118,12 +95,6 @@ input[type="radio"] {
   }
 }
 @media screen and (max-width: 767px) {
-  /* .register-section {
-    max-width: 500px;
-  } */
-  .form-section {
-    /* max-width: 500px; */
-  }
   .register-container {
     max-width: 500px;
   }
@@ -134,12 +105,6 @@ input[type="radio"] {
 }
 
 @media screen and (min-width: 768px) {
-  /* .register-section {
-    max-width: 600px;
-  } */
-  .form-section {
-    /* max-width: 600px; */
-  }
   .register-container {
     max-width: 600px;
   }

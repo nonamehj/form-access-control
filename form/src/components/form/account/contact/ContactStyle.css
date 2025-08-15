@@ -3,17 +3,13 @@
   justify-content: center;
   align-items: center;
   background-color: #f1f3f5;
-  /* border: 1px solid red; */
 }
 .contact-container {
   width: 100%;
   margin: 1rem 0;
-  /* border: 1px solid rgba(46, 43, 43, 0.5); */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
   border-radius: 0.25rem;
   background-color: #fff;
-  /* border: 1px solid blue; */
 }
 .contact-row {
   border: none;
@@ -40,15 +36,9 @@
   font-size: 0.95rem;
   outline: none;
   border-radius: 0.25rem;
-  /* border: 1px solid red; */
 }
 
 @media screen and (max-width: 767px) {
-  .contact-section {
-    /* max-width: 400px; */
-    /* min-height: 650px; */
-    /* max-height: 650px; */
-  }
   .contact-container {
     max-width: 400px;
     min-height: 650px;
@@ -61,11 +51,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .contact-section {
-    /* max-width: 450px; */
-    /* min-height: 700px; */
-    /* max-height: 700px; */
-  }
   .contact-container {
     max-width: 450px;
     min-height: 700px;

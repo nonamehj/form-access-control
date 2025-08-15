@@ -15,13 +15,15 @@ const FindId = () => {
       return;
     }
     const matchedUser = users.find(
-      (user) => user.name === userData.name && user.phone === userData.phone && user.birth === userData.birth
+      (user) =>
+        user.name === userData.name &&
+        user.phone === userData.phone &&
+        user.birth === userData.birth
     );
     if (!matchedUser) {
       alert("정보가 일치하지 않습니다");
       return;
     }
-
     alert(`아이디는 ${matchedUser.id} 입니다`);
     navigate("/login");
   };
@@ -53,7 +55,14 @@ const FindId = () => {
           </div>
           <div className="form-row find-row">
             <label htmlFor="birth">생년월일</label>
-            <input type="text" id="birth" name="birth" placeholder="숫자만 입력해주세요" maxLength={10} onChange={handleBirthChange}/>
+            <input
+              type="text"
+              id="birth"
+              name="birth"
+              placeholder="숫자만 입력해주세요"
+              maxLength={10}
+              onChange={handleBirthChange}
+            />
           </div>
           <div className="form-row find-row">
             <label htmlFor="phone">휴대전화 번호</label>

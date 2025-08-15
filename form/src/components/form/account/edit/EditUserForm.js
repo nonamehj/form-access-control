@@ -72,14 +72,6 @@ const EditUserForm = () => {
     setEditUser((prev) => ({ ...prev, [name]: newValue }));
   };
 
-  const handlePhoneBlur = (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    if (value.length === 11) {
-      e.target.value = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(
-        7
-      )}`;
-    }
-  };
   return (
     <section className="section edit-section form-section">
       <div className="edit-container form-container">
@@ -261,7 +253,6 @@ const EditUserForm = () => {
                   placeholder="숫자만 입력하세요"
                   value={editUser.phone}
                   onChange={handleChange}
-                  // onBlur={handlePhoneBlur}
                   maxLength={13}
                 />
               </div>

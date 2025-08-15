@@ -11,20 +11,8 @@ const agreementInitialState = {
   optional1: false,
   optional2: false,
 };
-// const agreementInitialState = {
-//   agreeAll: false,
-//   agreeRequired: {
-//     privacy: false,
-//     terms: false,
-//     identity: false,
-//   },
-//   agreeOptional: {
-//     event: false,
-//     promo: false,
-//   },
-// };
+
 const TermsAgreement = () => {
-  // const { handleSubmit, agreement, setAgreement } = useFormContext();
   const { handleSubmit } = useFormContext();
   const [agreement, setAgreement] = useState(agreementInitialState);
   const navigate = useNavigate();
@@ -38,18 +26,6 @@ const TermsAgreement = () => {
       optional1: checked,
       optional2: checked,
     });
-    // setAgreement({
-    //   agreeAll : checked,
-    //   agreeRequired : {
-    //     privacy : checked,
-    //     terms : checked,
-    //     identity : checked
-    //   },
-    //   agreeOptional : {
-    //     event : checked,
-    //     promo : checked
-    //   }
-    // })
   };
 
   const handleCheckboxChange = (e) => {
@@ -62,18 +38,6 @@ const TermsAgreement = () => {
 
     updated.all = allRequriedChecked && allSelectedChecked;
     setAgreement(updated);
-
-    // const {name, checked, value } = e.target;
-    // if(name === "agreeRequired") {
-    //   setAgreement((prev)=>({
-    //     ...prev, agreeRequired : {...prev.agreeRequired, [value] : checked}}))
-    // } else if (name === "agreeOptional") {
-    //   setAgreement((prev)=>({
-    //     ...prev, agreeOptional : {...prev.agreeOptional, [value] : checked}
-    //   }))
-    // } else if (name === "agreeAll") {
-
-    // }
   };
 
   const onSubmit = (e) => {
@@ -95,7 +59,14 @@ const TermsAgreement = () => {
     ) {
       setAgreement(agreementInitialState);
     }
-  }, []);
+  }, [
+    agreement.all,
+    agreement.optional1,
+    agreement.optional2,
+    agreement.required1,
+    agreement.required2,
+    agreement.required3,
+  ]);
 
   return (
     <section className="section agree-section">
@@ -108,7 +79,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="all"
-                  // name="agreeAll"
                   className="agree-input"
                   checked={agreement.all}
                   onChange={handleAllChange}
@@ -124,7 +94,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="required1"
-                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required1}
                   onChange={handleCheckboxChange}
@@ -136,7 +105,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="required2"
-                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required2}
                   onChange={handleCheckboxChange}
@@ -148,7 +116,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="required3"
-                  // name="agreeRequired"
                   className="agree-input"
                   checked={agreement.required3}
                   onChange={handleCheckboxChange}
@@ -164,7 +131,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="optional1"
-                  // name="agreeOptional"
                   className="agree-input"
                   checked={agreement.optional1}
                   onChange={handleCheckboxChange}
@@ -176,7 +142,6 @@ const TermsAgreement = () => {
                 <input
                   type="checkbox"
                   name="optional2"
-                  // name="agreeOptional"
                   className="agree-input"
                   checked={agreement.optional2}
                   onChange={handleCheckboxChange}
