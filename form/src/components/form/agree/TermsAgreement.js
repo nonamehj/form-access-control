@@ -16,6 +16,7 @@ const TermsAgreement = () => {
   const { handleSubmit } = useFormContext();
   const [agreement, setAgreement] = useState(agreementInitialState);
   const navigate = useNavigate();
+
   const handleAllChange = (e) => {
     const checked = e.target.checked;
     setAgreement({
@@ -43,30 +44,14 @@ const TermsAgreement = () => {
   const onSubmit = (e) => {
     const formData = new FormData(e.currentTarget);
     const formResult = handleSubmit(e, "agree", formData);
-    console.log("agreeFormResult", formResult);
     if (formResult) {
       navigate("/login/signup", { replace: true });
     }
   };
+
   useEffect(() => {
-    if (
-      agreement.required1 !== false ||
-      agreement.required2 !== false ||
-      agreement.required3 !== false ||
-      agreement.optional1 !== false ||
-      agreement.optional2 !== false ||
-      agreement.all !== false
-    ) {
-      setAgreement(agreementInitialState);
-    }
-  }, [
-    agreement.all,
-    agreement.optional1,
-    agreement.optional2,
-    agreement.required1,
-    agreement.required2,
-    agreement.required3,
-  ]);
+    setAgreement(agreementInitialState);
+  }, []);
 
   return (
     <section className="section agree-section">
