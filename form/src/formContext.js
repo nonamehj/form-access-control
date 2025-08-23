@@ -52,9 +52,9 @@ const FormProvider = ({ children }) => {
   const submitAgreeForm = useCallback((formData) => {
     const formAgreement = Object.fromEntries(formData);
     const allRequriedChecked =
-      formAgreement.required1 === "privacy" &&
-      formAgreement.required2 === "terms" &&
-      formAgreement.required3 === "identity";
+      formAgreement.required1 === "terms" &&
+      formAgreement.required2 === "privacy" &&
+      formAgreement.required3 === "age";
 
     if (formAgreement.all === "all" || allRequriedChecked) {
       setAgreement(formAgreement);

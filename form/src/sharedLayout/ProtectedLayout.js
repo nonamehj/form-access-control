@@ -8,7 +8,6 @@ const ProtectedLayout = ({ children }) => {
   if (currentUser === null) return null;
   if (!currentUser.loggedIn) return <Navigate to="/" replace />;
   return children;
-  return true;
 };
 
 export default ProtectedLayout;
