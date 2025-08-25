@@ -1,7 +1,6 @@
 import { koreanNameRegex } from "./regex";
 
 const validateFindUserData = (formData) => {
-  /*validateFindIdData 로 할경우 이거 삭제하지 */
   const userData = Object.fromEntries(formData);
   if (!userData.name) {
     return "이름을 입력해주세요";

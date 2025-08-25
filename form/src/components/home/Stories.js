@@ -60,7 +60,9 @@ const Stories = () => {
         </div>
         {!currentUser.loggedIn && moreRead && (
           <div className="locked-story login-prompt">
-            <Link to="/login"> 로그인 후 많은 항목을 확인하실 수 있습니다</Link>
+            <Link to="/login">
+              로그인 후 더 많은 정보를 확인하실 수 있습니다
+            </Link>
           </div>
         )}
       </div>

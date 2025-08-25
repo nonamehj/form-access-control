@@ -48,7 +48,6 @@ const Navbar = () => {
               onClick={() => handleClick("login")}
               className="nav-login-btn"
             >
-              {/* login */}
               로그인
             </Link>
           </div>

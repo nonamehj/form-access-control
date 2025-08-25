@@ -26,8 +26,6 @@ const FormProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(getCurrentUserStorage());
   const [agreement, setAgreement] = useState(getAgreementStorage());
 
-  console.log("context current", currentUser);
-
   const submitLoginForm = useCallback(
     (formData) => {
       const userId = formData.get("id");
@@ -92,6 +90,7 @@ const FormProvider = ({ children }) => {
     },
     [users]
   );
+  
   //회원 탈퇴
   const submitDeleteForm = useCallback(
     (formData) => {
