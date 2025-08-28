@@ -1,7 +1,6 @@
 # 📌 폼 기반 회원 관리 프로젝트
 
-## 폼 기능을 중심으로 로그인 상태 및 조건에 따라 데이터 노출 범위를 제어하는 React 프로젝트입니다.
-
+폼 기능을 중심으로 로그인 상태 및 조건에 따라 데이터 노출 범위를 제어하는 React 프로젝트입니다.
 단순 폼 UI를 넘어 **라우터**와 **API**를 결합하여 회원 전용 기능과 비회원 제한 기능을 구현했습니다.
 
 ## 📖 프로젝트 소개
@@ -243,7 +242,7 @@ src/
 
 - 폼 기반 기능 개발 역량 강화
 - 로그인 상태별 데이터 접근 제어 구현
-- API 연동과 라우터 중첩 구조 학슴
+- API 연동과 라우터 중첩 구조 학습
 
 ## 💭 개발하며 느낀 점
 
@@ -263,7 +262,7 @@ src/
 ## 📸 프로젝트 데모 및 기타
 
 📸 프로젝트 데모
-👉 [https://nonamehj.github.io/form-access-control](\https://nonamehj.github.io/form-access-control)
+👉 [https://nonamehj.github.io/form-access-control](https://nonamehj.github.io/form-access-control)
 
 💻 GitHub 코드
 👉 [https://github.com/nonamehj/form-access-control](https://github.com/nonamehj/form-access-control)
